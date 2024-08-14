@@ -1,4 +1,4 @@
-body{
+/*body{
     background:lightblue;
     text-align: center;
 }
@@ -24,4 +24,67 @@ img{
 .circle:hover{
     background: salmon;
     transform: rotate(360deg);
+}*/
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.grass, .sky, .road{
+    position: relative;
+}
+.sky{
+    background: skyblue;
+    height:40%;
+}
+.grass{
+    height: 30%;
+    background: seagreen;
+}
+.road{
+    height: 30%;
+    background: dimgrey;
+    box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+}
+.lines{
+    border: 4px dashed;
+    color: white;
+    box-sizing: border-box;
+    height: 0px;
+    top: 50%;
+    width: 100%;
+    position: absolute;
+}
+/*// elements to animate //*/
+.mario{
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    animation-name: drive;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode:both;
+    animation-iteration-count: 3;
+}
+/*// keyframes //*/
+@keyframes drive{
+    from{transform: translateX(0)}
+    to{transform: translateX(500px)}
+}
+.luigi{
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    animation-name: drive1;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
+}
+@keyframes drive1{
+    from{transform: translateX(0)}
+    to{transform: translateX(500px)}
 }
